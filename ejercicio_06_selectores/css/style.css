@@ -5,6 +5,6 @@
     color: white;
     background-color: green;
 }
-.container button::after{
+.container button:hover::after{
     content: '¡Hecho!';
 }
