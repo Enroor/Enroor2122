@@ -1,0 +1,9 @@
+.galery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.galeria{
+    width: 300px;
+}
