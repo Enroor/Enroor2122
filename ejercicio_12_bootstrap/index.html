@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elementos de interés en Bootstrap</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="row">
+        <div class="bg-light p-5 rounded-3">
+          <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Jumbotron</h1>
+            <p class="fs-4 col-md-8">
+              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
+              archivos de texto. Lorem Ipsum ha sido el texto de relleno
+              estándar de las industrias desde el año 1500, cuando un impresor.
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Ver modal
+            </button>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Este es el titulo
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">Este es el cuerpo del modal</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Guardar cambios
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-4">
+        <form>
+          <h2 class="text-center">Formulario</h2>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              aria-describedby="nombre"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="number" class="form-control" id="telefono" />
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" aria-label="mensaje"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary my-3">Enviar</button>
+        </form>
+      </div>
+      <div class="row my-4 d-flex justify-content-center">
+        <display class="h2 mb-4 text-center">Tarjeta de contacto</display>
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Enrique</h5>
+            <hr/>
+            <p class="card-text">
+              Acabo de terminar el CFGS Desarrollo de apliaciones web y quiero
+              seguir creciendo de manera profesional y adquirir más
+              conocimientos.
+            </p>
+            <div class="card-footer">
+                <p>rodriguez.ortega.enrique@gmail.com</p>
+                <button class="btn btn-primary ">Saber más</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    const myModal = document.getElementById("myModal");
+    const myInput = document.getElementById("myInput");
+
+    myModal.addEventListener("shown.bs.modal", () => {
+      myInput.focus();
+    });
+  </script>
+</html>
