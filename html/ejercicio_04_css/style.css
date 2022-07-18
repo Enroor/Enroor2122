@@ -1,0 +1,11 @@
+#elemento-1{
+    color: red;
+}
+
+div ul #elemento-1{
+    font-size: 2rem;
+}
+
+div ol #elemento-1{
+    font-size: 2rem;
+}

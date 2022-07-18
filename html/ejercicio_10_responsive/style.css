@@ -1,0 +1,33 @@
+.contenedor{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.aside{
+    display: flex;
+    border: solid 1px red;
+    border-radius: 5px;
+    padding: 2rem;
+    flex-direction: column;
+}
+.main{
+    border: solid 1px blue;
+    border-radius: 5px;
+    padding: 2rem;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 640px){
+    .contenedor{
+        flex-direction: column-reverse;
+    }
+
+    .aside {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
