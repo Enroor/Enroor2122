@@ -1,12 +1,16 @@
 class Estudiante{
     nombre;
-    
+    asignaturas = ["Javascript", "HTML", "CSS"]
     constructor(nombre){
         this.nombre = nombre;
+        this.asignaturas;
     }
 
     getDatos(){
-        return this.nombre;
+        return {
+            nombre: this.nombre,
+            asignaturas: this.asignaturas
+        }
     }
 }
 
