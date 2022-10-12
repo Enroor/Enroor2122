@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <select id="">
+            <option value="1"></option>
+            <option value="2">Lesión rodilla</option>
+            <option value="3">Coronavirus</option>
+            <option value="4">Cabeza</option>
+          </select>
+        </td>
+        <td>
+          <span></span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <select id="">
+            <option value="1"></option>
+            <option value="2">Lesión rodilla</option>
+            <option value="3">Coronavirus</option>
+            <option value="4">Cabeza</option>
+          </select>
+        </td>
+        <td>
+          <span></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select id="">
+            <option value="1"></option>
+            <option value="2">Lesión rodilla</option>
+            <option value="3">Coronavirus</option>
+            <option value="4">Cabeza</option>
+          </select>
+        </td>
+        <td>
+          <span></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select id="">
+            <option value="1"></option>
+            <option value="2">Lesión rodilla</option>
+            <option value="3">Coronavirus</option>
+            <option value="4">Cabeza</option>
+          </select>
+        </td>
+        <td>
+          <span></span>
+        </td>
+      </tr>
+    </table>
+    
+  </body>
+  <script>
+    $(document).ready(function () {
+        $("select").change(function () {
+        //Obtenemos el valor de option
+          var cam = $(this).val();
+          //Obtenemos la fila y buscamos el span
+          const rows = $(this).parents("tr").find("span");
+
+          if (cam == 2) {
+            rows.text("Pierna");
+          } else if (cam == 3) {
+            rows.text("Desconocido");
+          } else if (cam == 4) {
+            rows.text("Golpe");
+          } else {
+            rows.text("");
+          }
+        });
+    });
+  </script>
+</html>
