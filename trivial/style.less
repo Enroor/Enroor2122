@@ -1,0 +1,102 @@
+@font-face {
+    font-family: pixel;
+    src: url(./PressStart2P.ttf);
+    format: 'truetype';
+}
+.d-flex{
+       display:flex;
+        &.flex-wrap {flex-wrap: wrap;}
+        &.ai-top  {align-items: text-top;}
+        &.ai-fs  {align-items: flex-start;}
+        &.ai-baseline {align-items: baseline;}
+        &.ai-center {align-items: center;}
+        &.jc-center {justify-content: center;}
+        &.jc-between {justify-content: space-between;}
+        &.jc-around {justify-content: space-around;}
+        &.flex-column {flex-direction: column;}
+        .flex-equal {flex: 1;}
+}
+.ta-r {text-align: right!important;}
+.ta-l {text-align: left!important;}
+.ta-c {text-align: center!important;}
+
+.py-4 {padding: 20px 0;}
+.my-6 {margin: 30px 0;}
+.px-4 {padding: 0px 20px;}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    .bg-main{
+        font-family: 'pixel';
+        color: gold;
+        -webkit-text-stroke: 1px black;
+        font-size: 1.1rem;
+        background-image:url(bg-main.jpg);
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size: 100% 100%;
+        img{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .bg-quiz{
+            width: 50%;
+            .score{
+                position: absolute;
+                background-image:url(score.png);
+                background-repeat:no-repeat;
+                height:150px;
+                width:200px;
+                background-position:center;
+                background-size: 100% 100%;
+                span{
+                    margin: 12px;
+                }
+            }
+            img{
+                width: 100%;
+                height: calc(100vh - 60px);
+            }
+        }
+        .quiz{
+            width: 50%;
+            button{
+                font-family: 'pixel';
+                color: gold;
+                background-image:url(btn-on.png);
+                background-repeat:no-repeat;
+                height:50px;
+                width:200px;
+                background-position:center;
+                background-size: 100% 100%;
+                margin: 20px 0;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                line-height: 0;
+            }
+            .arrows{
+                img{
+                    width: 100px;
+                    height: 100px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 970px){
+    .bg-main{
+        .content{
+            flex-direction: column;
+            .bg-quiz {
+                width: 100%;
+                padding: 5px;
+            }
+            .quiz {width: 100%;}
+        }
+    }
+}

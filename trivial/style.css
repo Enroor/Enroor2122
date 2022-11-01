@@ -1,0 +1,154 @@
+@font-face {
+  font-family: pixel;
+  src: url(./PressStart2P.ttf);
+  format: 'truetype';
+}
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+  .d-flex.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+  .d-flex.ai-top  {
+  -webkit-box-align: text-top;
+      -ms-flex-align: text-top;
+          align-items: text-top;
+}
+  .d-flex.ai-fs  {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+  .d-flex.ai-baseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+  .d-flex.ai-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+  .d-flex.jc-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+  .d-flex.jc-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+  .d-flex.jc-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.d-flex.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.d-flex   .flex-equal {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.ta-r {
+  text-align: right!important;
+}
+.ta-l {
+  text-align: left!important;
+}
+.ta-c {
+  text-align: center!important;
+}
+.py-4 {
+  padding: 20px 0;
+}
+.my-6 {
+  margin: 30px 0;
+}
+.px-4 {
+  padding: 0px 20px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body .bg-main {
+  font-family: 'pixel';
+  color: gold;
+  -webkit-text-stroke: 1px black;
+  font-size: 1.1rem;
+  background-image: url(bg-main.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+body .bg-main img {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+body .bg-main .bg-quiz {
+  width: 50%;
+}
+body .bg-main .bg-quiz .score {
+  position: absolute;
+  background-image: url(score.png);
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 200px;
+  background-position: center;
+  background-size: 100% 100%;
+}
+body .bg-main .bg-quiz .score span {
+  margin: 12px;
+}
+body .bg-main .bg-quiz img {
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+body .bg-main .quiz {
+  width: 50%;
+}
+body .bg-main .quiz button {
+  font-family: 'pixel';
+  color: gold;
+  background-image: url(btn-on.png);
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 200px;
+  background-position: center;
+  background-size: 100% 100%;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  line-height: 0;
+}
+body .bg-main .quiz .arrows img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+@media (max-width: 970px) {
+  .bg-main .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bg-main .content .bg-quiz {
+    width: 100%;
+    padding: 5px;
+  }
+  .bg-main .content .quiz {
+    width: 100%;
+  }
+}

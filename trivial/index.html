@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-main py-4 px-4">
+      <div class="d-flex jc-around content">
+        <div class="bg-quiz px-4">
+          <div class="score d-flex ai-center jc-center">
+            <span id="score1">0</span>
+            <span> / </span>
+            <span id="score2">34</span>
+          </div>
+          <img class="my-6" src="quiz-bg.jpg" alt="" />
+        </div>
+        <div class="quiz px-4">
+          <h1 class="py-4">
+            ¿Qué famoso jugador le dió una patada en sus partes más nobles?
+          </h1>
+          <div class="d-flex jc-center ai-center flex-column ta-c options">
+            <button id="option1" class="btn-option py-4">Opción 1</button>
+            <button id="option2" class="btn-option py-4">Opción 2</button>
+            <button id="option3" class="btn-option py-4">Opción 3</button>
+            <button id="option4" class="btn-option py-4">Opción 4</button>
+          </div>
+          <div class="d-flex jc-around ai-center arrows">
+            <img id="countSub" src="flecha.png" alt="" />
+            <img id="countAdd" src="flecha_right.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+        //Incremento nº pregunta
+        var botonRight = document.getElementById("countAdd");
+        var span1 = document.getElementById("score1");
+        var maxQuiz = document.getElementById("score2").textContent;
+        var contador = 0;
+        botonRight.onclick = function () {
+          if (contador < maxQuiz) {
+            contador++;
+            span1.textContent = contador;
+          }
+        };
+
+        //Decremento nº pregunta
+        var botonLeft = document.getElementById("countSub");
+        var span1 = document.getElementById("score1");
+        botonLeft.onclick = function () {
+          if (contador > 0) {
+            contador--;
+            span1.textContent = contador;
+          }
+        };
+
+        //Background image off
+        var option = document.getElementById("option1");
+        option.onclick = function () {
+            if(option.style.backgroundImage == 'url("btn-off.png")'){
+                option.style.backgroundImage = "url('btn-on.png')";
+            }else{
+                option.style.backgroundImage = "url('btn-off.png')";
+            }
+        };
+
+        var option2 = document.getElementById("option2");
+        option2.onclick = function () {
+            if(option2.style.backgroundImage == 'url("btn-off.png")'){
+                option2.style.backgroundImage = "url('btn-on.png')";
+            }else{
+                option2.style.backgroundImage = "url('btn-off.png')";
+            }
+        };
+
+        var option3 = document.getElementById("option3");
+        option3.onclick = function () {
+            if(option3.style.backgroundImage == 'url("btn-off.png")'){
+                option3.style.backgroundImage = "url('btn-on.png')";
+            }else{
+                option3.style.backgroundImage = "url('btn-off.png')";
+            }
+        };
+
+        var option4 = document.getElementById("option4");
+        option4.onclick = function () {
+            if(option4.style.backgroundImage == 'url("btn-off.png")'){
+                option4.style.backgroundImage = "url('btn-on.png')";
+            }else{
+                option4.style.backgroundImage = "url('btn-off.png')";
+            }
+        };
+  </script>
+</html>
